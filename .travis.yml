@@ -15,7 +15,7 @@ before_install:
   - gcloud config set compute/zone us-east1-c
   - gcloud container clusters get-credentials multi-cluster
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
-  - docker built -t avis2good/react-test -f ./client/Dockerfile.dev ./client
+  - docker build -t avis2good/react-test -f ./client/Dockerfile.dev ./client
 
 
 script:
