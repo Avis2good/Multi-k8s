@@ -9,8 +9,8 @@ docker push avis2good/multi-worker:latest
 docker push avis2good/multi-client:$SHA
 docker push avis2good/multi-server:$SHA
 docker push avis2good/multi-worker:$SHA
-kubectl apply -f k8s
 
+kubectl apply -f k8s
 kubectl set image deployments/server-deployment server=avis2good/multi-server:$SHA
 kubectl set image deployments/client-deployment client=avis2good/multi-client:$SHA
 kubectl set image deployments/worker-deployment worker=avis2good/multi-worker:$SHA
